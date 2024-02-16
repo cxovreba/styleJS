@@ -1,6 +1,7 @@
 const body = document.querySelector('.main');
 const main = document.createElement('div');
 const intro = document.createElement('div');
+const buttons = document.createElement('div');
 const details = document.createElement('div');
 const subscribe = document.createElement('div');
 const feature = document.createElement('div');
@@ -8,6 +9,7 @@ const email = document.createElement('div');
 
 body.appendChild(main);
 main.appendChild(intro);
+main.appendChild(buttons);
 main.appendChild(details);
 body.appendChild(subscribe);
 subscribe.appendChild(feature);
@@ -26,6 +28,8 @@ intro.style.display = 'flex';
 intro.style.flexDirection = 'column';
 intro.style.alignItems = 'center';
 intro.style.gap = '40px';
+buttons.style.display = 'flex';
+buttons.style.gap = '10px';
 details.style.display = 'flex';
 details.style.width = '1155px';
 details.style.gap = '30px';
@@ -46,15 +50,6 @@ title('#23A6F0', '16px', '700', '0.1px', '536px', '0', 'Welcome');
 title('#FFFFFF', '57px', '700', '0.2px', '536px', '0', 'Selling on the internet like a pro');
 title('#FFFFFF', '20px', '400', '0.2px', '536px', '0', 'We know how large objects will act, but things on a small scale just do not act that way.');
 
-// function div(display, gap) {
-//     const div = document.createElement('div');
-//     div.style.display = display;
-//     div.style.gap = gap;
-//     return intro.appendChild(div);
-// }
-
-// div('flex', '10px');
-
 function button(background_color, display_button, justifyContent, alignItems, width, height, color, fontSize, fontWeight, letterSpacing, border, borderRadius, text) {
     const button = document.createElement('button');
     button.style.background = background_color;
@@ -70,7 +65,7 @@ function button(background_color, display_button, justifyContent, alignItems, wi
     button.style.border = border;
     button.style.borderRadius = borderRadius;
     button.textContent = text;
-    return intro.appendChild(button);
+    return buttons.appendChild(button);
 }
 
 button('#23A6F0', 'flex', 'center', 'center', '193px', '52px', '#FFFFFF', '14px', '700', '0.2px', '0', '5px', 'Get Quote Now');
